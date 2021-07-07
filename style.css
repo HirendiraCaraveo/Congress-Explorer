@@ -132,16 +132,17 @@ body {
 }
 
 input {
-    width: 50%;
-    border-radius: 5px 5px 5px 5px;
-    padding: 5px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
-    font-size: 16px;
+    width: 20%;
     background-color: #008CBA;
-    color: midnightblue;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border-radius: 4px;
+    color: antiquewhite;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
 }
 
 textarea {
@@ -155,7 +156,7 @@ textarea {
     font-size: 16px
 }
 
-.button {
+button {
     width: 20%;
     background-color: #008CBA;
     padding: 14px 20px;

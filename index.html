@@ -5,8 +5,7 @@
     <meta charset="UTF-8">
     <title> Persona Profile</title>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script type="text/javascript" src="senators.js" src="representatives.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1"> >
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -20,7 +19,7 @@
 
                 <!-- Start of the header -->
                 <header>
-                    <h2>Congress Explorer</h2>
+                    <h2>People of Congress</h2>
                     <hr />
                 </header>
 
@@ -28,32 +27,47 @@
                 <!-- Start of the navigation -->
 
                 <div class="navbar">
-                    <a class="active" href="index.html">Let's Start </a>
+                    <a href="index.html">Members of congress with the ability sort by various attributes. </a>
 
                 </div>
 
-                <input type="button" onclick="myfunction()" value="Display">
+                <!--  <input type="button" onclick="myfunction()" value="Display"><br>-->
+                <button id="seniorityButton">Sort by Seniority</button>
+                <button id="birthdayButton">Sort by Birthday</button>
             </div>
 
-            <script>
-                function NYEDays(CheckDay) {
-                    var XYear = CheckDay.getFullYear();
-                    var XDay = new Date("December, 31, 2014");
-                    XDay.setFullYear(XYear);
-                    var DayCount = (XDay - CheckDay) / (1000 * 60 * 60 * 24);
-                    DayCount = Math.round(DayCount);
-                    return DayCount;
+            <script type="text/javascript" src="congress.js"></script>
+
+            <!-- <script>
+                myfunction filterHouseOfCongress(arr, valueToFilter) {
+                    let filtered = arr.filter((item) => {
+                        return item.shortTitle == valueToFilter
+                    })
+                    console.log(filtered)
+
+                    return filtered
                 }
 
-                function printdate() {
+                function renderCongress(congressArray, mainElement) {
+                    mainElement.innerHTML = '';
+                    congressArray.forEach((person) => {
+                        // console.log(person.fullName)
+                        //create the HTML structure
+                        let personDiv = createElement('div');
+                        let personImg = createElement('img');
+                        let personNameH2 = createElement('h2');
+                        let personNameText = createTextNode(person.fullName)
+                        appendElement(personNameH2, personNameText)
+                        appendElement(personDiv, personNameH2)
+                            // <img />
+                            // <img src='url to pic' />
+                        personImg.setAttribute('src', person.imgUrl)
+                        appendElement(personDiv, personImg)
+                        appendElement(mainElement, personDiv)
 
-                    var today = new date();
-
-                    var fulldate = document.getElementById("fulldate");
-                    fulldate.textContent = today.getTime();
-
+                    })
                 }
-            </script>
+            </script> -->
 
             <div class="footer">
                 <p><em> &copy; 2021 &bull;  Congress Explorer &bull; Build by Hirendira Caraveo Aragon as a class project</em></p>
