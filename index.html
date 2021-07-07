@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <title> Persona Profile</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript" src="senators.js" src="representatives.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="wrapper">
+
+        <div class="content">
+            <hr />
+            <div class="details">
+
+                <!-- Start of the header -->
+                <header>
+                    <h2>Congress Explorer</h2>
+                    <hr />
+                </header>
+
+
+                <!-- Start of the navigation -->
+
+                <div class="navbar">
+                    <a class="active" href="index.html">Let's Start </a>
+
+                </div>
+
+                <input type="button" onclick="myfunction()" value="Display">
+            </div>
+
+            <script>
+                function NYEDays(CheckDay) {
+                    var XYear = CheckDay.getFullYear();
+                    var XDay = new Date("December, 31, 2014");
+                    XDay.setFullYear(XYear);
+                    var DayCount = (XDay - CheckDay) / (1000 * 60 * 60 * 24);
+                    DayCount = Math.round(DayCount);
+                    return DayCount;
+                }
+
+                function printdate() {
+
+                    var today = new date();
+
+                    var fulldate = document.getElementById("fulldate");
+                    fulldate.textContent = today.getTime();
+
+                }
+            </script>
+
+            <div class="footer">
+                <p><em> &copy; 2021 &bull;  Congress Explorer &bull; Build by Hirendira Caraveo Aragon as a class project</em></p>
+            </div>
+</body>
+
+</html>
